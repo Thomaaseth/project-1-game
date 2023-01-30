@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 1920px;
+    position: absolute
+}
+
+div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 558px;
+    left: 879px;
+}
