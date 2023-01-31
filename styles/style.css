@@ -12,7 +12,7 @@ img {
     position: absolute
 }
 
-div {
+#bear-wall {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -20,4 +20,130 @@ div {
     position: absolute;
     top: 558px;
     left: 879px;
+}
+
+#tv {
+    width: 53px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 708px;
+    left: 1076px;
+}
+
+#sofa {
+    width: 86px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 641px;
+    left: 901px;
+}
+
+#bed-pillow {
+    width: 51px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 437px;
+    left: 530px;
+}
+
+#bedroom-rug {
+    width: 71px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 547px;
+    left: 480px;
+}
+
+#nightstand {
+    width: 35px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 376px;
+    left: 452px;
+}
+
+#microwave {
+    width: 35px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 373px;
+    left: 736px;
+    border-radius: 50%;
+}
+
+#blender {
+    width: 35px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    left: 1020px;
+    border-radius: 50%;
+}
+
+#oven {
+    width: 35px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 363px;
+    left: 992px;
+    border-radius: 50%;
+}
+
+#washing-machine {
+    width: 35px;
+    height: 37px;
+    background-color: red;
+    position: absolute;
+    top: 264px;
+    left: 1138px;
+    border-radius: 50%;
+}
+
+#livingRoom-radio {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    top: 478px;
+    left: 1265px;
+    border-radius: 50%;
+}
+
+#livingRoom-cup-table {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    position: absolute;
+    top: 608px;
+    left: 1362px;
+    border-radius: 50%;
+}
+
+#bookshelf-books {
+    width: 25px;
+    height: 15px;
+    background-color: red;
+    position: absolute;
+    top: 360px;
+    left: 1455px;
+    border-radius: 50%;
+}
+
+#laptop {
+    width: 35px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    top: 405px;
+    left: 1651px;
+    border-radius: 50%;
 }
