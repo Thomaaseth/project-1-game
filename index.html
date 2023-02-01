@@ -5,35 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="script.js">
+    <script type="module" src="./script.js"></script>
     <title>Escape Game</title>
 </head>
 <body>
     <img href="#" src="https://raw.githubusercontent.com/lessacs/project-1-escape-game/main/house.png" alt="house">
-        <div id="bear-wall"></div>
-        <div id="tv"></div>
-        <div id="sofa"></div>
-        <div id="bed-pillow"></div>
-        <div id="bedroom-rug"></div>
-        <div id="bathroom-mirror"></div>
-        <div id="nightstand"></div>
-        <div id="microwave"></div>
-        <div id="blender"></div>
-        <div id="oven"></div>
-        <div id="washing-machine"></div>
-        <div id="dryer"></div>
-        <div id="livingRoom-radio"></div>
-        <div id="livingRoom-cup-table"></div>
-        <div id="bookshelf-books"></div>
-        <div id="laptop"></div>
-    <div class="popup" id="button-1">
-        <div class="overlay"></div>
-        <div class="content">
-            <div class="close-btn" onclick="togglePopup()">&times;
-        </div>
-            <h1>Clue</h1>
-            <p>Test</p>
-    </div>
-    <button onclick="togglePopup()">Show Popup</button>
+        <div class="clues" id="bear-wall"></div>
+        <div class="clues" id="tv"></div>
+        <div class="clues" id="sofa"></div>
+        <div class="clues" id="bed-pillow"></div>
+        <div class="clues" id="bedroom-rug"></div>
+        <div class="clues" id="bathroom-mirror"></div>
+        <div class="clues" id="nightstand"></div>
+        <div class="clues" id="microwave"></div>
+        <div class="clues" id="blender"></div>
+        <div class="clues" id="oven"></div>
+        <div class="clues" id="washing-machine"></div>
+        <div class="clues" id="dryer"></div>
+        <div class="clues" id="livingRoom-radio"></div>
+        <div class="clues" id="livingRoom-cup-table"></div>
+        <div class="clues" id="bookshelf-books"></div>
+        <div class="clues" id="laptop"></div>
+    <dialog id="dialog">
+        <h3 id="title-clue"></h3>
+        <img id="popup-img" src="" alt="">
+        <p id="text-clue"></p>
+        <button id="close-btn">X</button>
+    </dialog>
 </body>
 </html>
