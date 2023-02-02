@@ -1,4 +1,4 @@
-# project-1
+# IRONHACK - project-1
 
 Escape Game "Find the objects"
 
