@@ -12,33 +12,27 @@ const messages = [
     {
         id: "bear-wall",
         title: "Bear",
-        message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.`,
+        message: ``,
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/bear_SE.png"
     },
     {
         id: "tv",
-        title: "tv",
+        title: "TV",
         message: `I would love to rest and watch a movie. Maybe I could prepare myself a juice and some popcorn. I would also need to be sitting confortably...`,
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/televisionModern_SE.png",
         story: ["sofa", "blender", "oven"]
     },
     {
         id: "sofa",
-        title: "sofa",
+        title: "Sofa",
         message: `I just want to rest and read a book while drinking tea... I had a tough day...`,
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/loungeSofa_SE.png",
         story: ["bookshelf-books","livingRoom-cup-table"]
     },
     {
         id: "bed-pillow",
-        title: "bed-pillow",
-        message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.`,
+        title: "Bed pillow",
+        message: ``,
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/pillowLong_SE.png"
     },
     {
@@ -50,72 +44,70 @@ const messages = [
     },
     {
         id: "bathroom-mirror",
-        title: "bathroom-mirror",
-        message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.`,
+        title: "Mirror",
+        message: ``,
         image: 'https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/bathroomMirror_SE.png'
     },
     {
         id: "nightstand",
-        title: "nightstand",
+        title: "Nightstand",
         message: "",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/cabinetBed_SW.png"
     },
     {
         id: "microwave",
-        title: "microwave",
+        title: "Microwave",
         message: "I am hungry, let's make a soup.",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenMicrowave_SE.png",
-        story: []
+        story: ["blender", "oven"]
     },
     {
         id: "blender",
-        title: "blender",
+        title: "Blender",
         message: "",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenBlender_SE.png"
     },
     {
         id: "oven",
-        title: "oven",
+        title: "Stove",
         message: "",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenStoveElectric_SE.png"
     },
     {
         id: "washing-machine",
-        title: "washing-machine",
+        title: "Washing machine",
         message: "",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/washer_SE.png"
     },
     {
         id: "dryer",
-        title: "dryer",
+        title: "Dryer",
         message: "",
         image: 'https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/dryer_SE.png',
     },
     {
         id: "livingRoom-radio",
-        title: "livingRoom-radio",
+        title: "Radio",
         message: "",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/radio_SE.png"
     },
     {
         id: "livingRoom-cup-table",
-        title: "livingRoom-cup-table",
+        title: "Cup",
         message: "One thing that goes well with a hot drink is a good book",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/plantSmall3_SE.png",
         story: ["bookshelf-books"]
     },
     {
         id: "bookshelf-books",
-        title: "bookshelf-books",
-        messages: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/books_SE.png"
+        title: "Books",
+        message: "A tea, a book and bedtime. Perfect way to end a great evening!",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/books_SE.png",
+        story: ["livingRoom-cup-table", "bed-pillow"]
     },
     {
         id: "laptop",
-        title: "laptop",
+        title: "Laptop",
         message: "I have a lot of coding to do. It sure would be nice if I was sitting comfortably with a drink in my hand, with nice music playing in the background",
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/laptop_SE.png",
         story: ["livingRoom-radio", "sofa", "livingRoom-cup-table"]
