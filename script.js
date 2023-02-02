@@ -1,13 +1,14 @@
 
 let game = null;
-const found = [];
+let found = [];
 const cluesElements = document.querySelectorAll('.clues');
 const modal = document.getElementById('dialog');
 const closeModalButton = modal.querySelector('button');
-const modalWin = document.getElementById('win-popup');
-const modalLost = document.getElementById('lost-popup');
-const closeModalWinButton = modalWin.querySelector('button');
-const closeModalLostButton = modalLost.querySelector('button');
+const modalResult = document.getElementById('result-popup');
+// const modalWin = document.getElementById('win-popup');
+// const modalLost = document.getElementById('lost-popup');
+// const closeModalWinButton = modalWin.querySelector('button');
+// const closeModalLostButton = modalLost.querySelector('button');
 
 const messages = [
     {
@@ -137,22 +138,30 @@ cluesElements.forEach(clue => {
 
         console.log(game, message);
         if (!game) {
-            game = message.story;
+            game = [message.id, ...message.story];
+            found.push(message.id);
         } else {
-            if (game.includes(message.id) && !found.includes(message.id)) {
+            if (game.includes(message.id)) {
                 //nice
-                found.push(message.id);
+                if ( !found.includes(message.id)) {
+                    found.push(message.id);
+                    console.log(found);
+                }
                 if (game.length === found.length) {
-                    // alert('win');
-                    modalWin.showModal();
+                    modalResult.querySelector('h3').textContent = 'You win!'
+                    alert('win');
+                    modalResult.showModal();
                 } else {
-                    // alert("nice");
+                    alert("nice");
                     
                 }
             } else {
                 // you lose
                 // alert("bad")
-                modalLost.showModal()
+                modalResult.querySelector('h3').textContent = 'You lose!'
+                // modalLost.showModal()
+                modalResult.showModal();
+                 
             }
             return;
         }
@@ -165,8 +174,14 @@ cluesElements.forEach(clue => {
 })
 
 closeModalButton.addEventListener("click", () => modal.close());
-closeModalWinButton.addEventListener('click', () => modalWin.close());
-closeModalLostButton.addEventListener('click', () => modalLost.close());
-
+// closeModalWinButton.addEventListener('click', () => modalWin.close());
+// closeModalLostButton.addEventListener('click', () => modalLost.close());
+document.querySelectorAll('.reset').forEach(btn => {
+    btn.addEventListener('click', ()=> {
+        game = null;
+        found = [];
+        modalResult.close();
+    })
+})
 
 
