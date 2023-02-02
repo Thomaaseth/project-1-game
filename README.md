@@ -45,5 +45,5 @@ The Game may be iterated upon to make it a lot more fun and especially more comp
 Open source.
 Do what you wish with this game. 
 
-Credit: thanks to Kenney  (https://www.kenney.nl/) for the assets.
+Credit: thanks to Kenney (https://www.kenney.nl/) for the assets.
   
