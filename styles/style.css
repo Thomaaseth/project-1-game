@@ -298,6 +298,35 @@ img {
     margin: 0.8rem;
 }
 
+#win-popup {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 10%;
+}
+
+#lost-popup {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 10%;
+}
 
 
 

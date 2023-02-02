@@ -1,11 +1,14 @@
-// function togglePopup() {
-//     document.getElementById("laptop").classList.toggle("active")
-// }
+
 let game = null;
-const found = []
-const cluesElements = document.querySelectorAll('.clues')
-const modal = document.getElementById('dialog')
-const closeModalButton = modal.querySelector('button')
+const found = [];
+const cluesElements = document.querySelectorAll('.clues');
+const modal = document.getElementById('dialog');
+const closeModalButton = modal.querySelector('button');
+const modalWin = document.getElementById('win-popup');
+const modalLost = document.getElementById('lost-popup');
+const closeModalWinButton = modalWin.querySelector('button');
+const closeModalLostButton = modalLost.querySelector('button');
+
 const messages = [
     {
         id: "bear-wall",
@@ -123,20 +126,16 @@ const messages = [
         image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/laptop_SE.png",
         story: ["livingRoom-radio", "sofa", "livingRoom-cup-table"]
     }
-
-
-
-]
+];
 
 cluesElements.forEach(clue => {
     clue.addEventListener("click", () => {
-        console.log('click')
-        const message = messages.find(msg => msg.id === clue.id)
-        console.log(clue.id)
-        if (!message) return
+        console.log('click');
+        const message = messages.find(msg => msg.id === clue.id);
+        console.log(clue.id);
+        if (!message) return;
 
-
-        console.log(game, message)
+        console.log(game, message);
         if (!game) {
             game = message.story;
         } else {
@@ -144,29 +143,30 @@ cluesElements.forEach(clue => {
                 //nice
                 found.push(message.id);
                 if (game.length === found.length) {
-                    alert('win')
+                    // alert('win');
+                    modalWin.showModal();
                 } else {
-                    alert("nice")
-
+                    // alert("nice");
+                    
                 }
             } else {
                 // you lose
-                alert("bad")
+                // alert("bad")
+                modalLost.showModal()
             }
-
-            return
+            return;
         }
-
-
-        modal.querySelector('h3').textContent = message.title
-        modal.querySelector('p').textContent = message.message
-        modal.querySelector('img').src = message.image
-        modal.showModal()
+        modal.querySelector('h3').textContent = message.title;
+        modal.querySelector('p').textContent = message.message;
+        modal.querySelector('img').src = message.image;
+        modal.showModal();
     })
 
 })
 
-closeModalButton.addEventListener("click", () => modal.close())
+closeModalButton.addEventListener("click", () => modal.close());
+closeModalWinButton.addEventListener('click', () => modalWin.close());
+closeModalLostButton.addEventListener('click', () => modalLost.close());
 
 
 
