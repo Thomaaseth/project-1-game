@@ -124,39 +124,27 @@ const messages = [
 
 cluesElements.forEach(clue => {
     clue.addEventListener("click", () => {
-        console.log('click');
         const message = messages.find(msg => msg.id === clue.id);
-        console.log(clue.id);
         if (!message) return;
 
-        console.log(game, message);
         if (!game) {
             game = [message.id, ...message.story];
             found.push(message.id);
         } else {
             if (game.includes(message.id)) {
-                //nice
                 if ( !found.includes(message.id)) {
                     found.push(message.id);
-                    console.log(found);
                 }
                 if (game.length === found.length) {
                     modalResult.querySelector('h3').textContent = 'You win! Congratulations'
                     modalResult.showModal();
                 } else {
-                    // alert("nice");
-                    // modalResult.querySelector('h3').textContent = 'Well done! Keep going!'
-                    // modalResult.showModal();
                     modalFeedback.showModal();
                 }
             } else {
-                // you lose
-                // alert("bad")
                 modalResult.querySelector('h3').textContent = 'You lose! Try again!'
-                // modalLost.showModal()
                 modalResult.showModal();
-                 
-            }
+                }
             return;
         }
         modal.querySelector('h3').textContent = message.title;
@@ -169,8 +157,7 @@ cluesElements.forEach(clue => {
 
 closeModalButton.addEventListener("click", () => modal.close());
 closeModalFeedback.addEventListener('click', () => modalFeedback.close())
-// closeModalWinButton.addEventListener('click', () => modalWin.close());
-// closeModalLostButton.addEventListener('click', () => modalLost.close());
+
 document.querySelectorAll('.reset').forEach(btn => {
     btn.addEventListener('click', ()=> {
         game = null;
