@@ -5,10 +5,8 @@ const cluesElements = document.querySelectorAll('.clues');
 const modal = document.getElementById('dialog');
 const closeModalButton = modal.querySelector('button');
 const modalResult = document.getElementById('result-popup');
-// const modalWin = document.getElementById('win-popup');
-// const modalLost = document.getElementById('lost-popup');
-// const closeModalWinButton = modalWin.querySelector('button');
-// const closeModalLostButton = modalLost.querySelector('button');
+const modalFeedback = document.getElementById('feedback');
+const closeModalFeedback = modalFeedback.querySelector('button');
 
 const messages = [
     {
@@ -23,20 +21,16 @@ const messages = [
     {
         id: "tv",
         title: "tv",
-        message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.`,
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/televisionModern_SE.png"
+        message: `I would love to rest and watch a movie. Maybe I could prepare myself a juice and some popcorn. I would also need to be sitting confortably...`,
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/televisionModern_SE.png",
+        story: ["sofa", "blender", "oven"]
     },
     {
         id: "sofa",
         title: "sofa",
-        message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.`,
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/loungeSofa_SE.png"
+        message: `I just want to rest and read a book while drinking tea... I had a tough day...`,
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/loungeSofa_SE.png",
+        story: ["bookshelf-books","livingRoom-cup-table"]
     },
     {
         id: "bed-pillow",
@@ -50,11 +44,9 @@ const messages = [
     {
         id: 'bedroom-rug',
         title: "Rug",
-        message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.`,
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/rugRound_SE.png"
+        message: `This rug is dirty, I need to clean the bathroom and tidy my flat... Damn, I almost forgot I am running out of clean underwear!`,
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/rugRound_SE.png",
+        story: ["bathroom-mirror", "washing-machine", "dryer"]
     },
     {
         id: "bathroom-mirror",
@@ -74,8 +66,9 @@ const messages = [
     {
         id: "microwave",
         title: "microwave",
-        message: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenMicrowave_SE.png"
+        message: "I am hungry, let's make a soup.",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenMicrowave_SE.png",
+        story: []
     },
     {
         id: "blender",
@@ -148,17 +141,18 @@ cluesElements.forEach(clue => {
                     console.log(found);
                 }
                 if (game.length === found.length) {
-                    modalResult.querySelector('h3').textContent = 'You win!'
-                    alert('win');
+                    modalResult.querySelector('h3').textContent = 'You win! Congratulations'
                     modalResult.showModal();
                 } else {
-                    alert("nice");
-                    
+                    // alert("nice");
+                    // modalResult.querySelector('h3').textContent = 'Well done! Keep going!'
+                    // modalResult.showModal();
+                    modalFeedback.showModal();
                 }
             } else {
                 // you lose
                 // alert("bad")
-                modalResult.querySelector('h3').textContent = 'You lose!'
+                modalResult.querySelector('h3').textContent = 'You lose! Try again!'
                 // modalLost.showModal()
                 modalResult.showModal();
                  
@@ -174,6 +168,7 @@ cluesElements.forEach(clue => {
 })
 
 closeModalButton.addEventListener("click", () => modal.close());
+closeModalFeedback.addEventListener('click', () => modalFeedback.close())
 // closeModalWinButton.addEventListener('click', () => modalWin.close());
 // closeModalLostButton.addEventListener('click', () => modalLost.close());
 document.querySelectorAll('.reset').forEach(btn => {
