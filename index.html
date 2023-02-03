@@ -10,7 +10,7 @@
 </head>
 <body>
     <img href="#" src="https://raw.githubusercontent.com/lessacs/project-1-escape-game/main/house.png" alt="house">
-        <div class="clues" id="bear-wall"></div>
+        <!-- <div class="clues" id="bear-wall"></div> -->
         <div class="clues" id="tv"></div>
         <div class="clues" id="sofa"></div>
         <div class="clues" id="bed-pillow"></div>
@@ -26,7 +26,12 @@
         <div class="clues" id="livingRoom-cup-table"></div>
         <div class="clues" id="bookshelf-books"></div>
         <div class="clues" id="laptop"></div>
-    <dialog id="dialog">
+        <dialog id="start">
+            <h3>Find the objects!</h3>
+            <p>Welcome to the game. In this game, your goal is to find the objects to complete a short story. Click anywhere in the house to start the game. Good luck!</p>
+            <button id="close-btn">X</button>
+        </dialog>
+        <dialog id="dialog">
         <h3 id="title-clue"></h3>
         <img id="popup-img" src="" alt="">
         <p id="text-clue"></p>

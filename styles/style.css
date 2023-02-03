@@ -253,6 +253,33 @@ img {
     border-radius: 10%;
 }
 
+#start {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 10%;
+}
+
+#start::backdrop {
+    backdrop-filter: brightness(.5);
+}
+
+p {
+    display: flex;
+    align-items: center;
+    margin: 2rem 4rem 0rem 4rem;
+    justify-content: center;
+    text-align: justify;
+}
+
 #close-btn {
     cursor: pointer;
     position: absolute;
@@ -313,6 +340,10 @@ img {
     border-radius: 10%;
 }
 
+#result-popup::backdrop {
+    backdrop-filter: brightness(.5);
+}
+
 #feedback {
     position: fixed;
     top: 50vh;
@@ -326,6 +357,10 @@ img {
     padding: 20px;
     border: none;
     border-radius: 10%;
+}
+
+#feedback::backdrop {
+    backdrop-filter: brightness(.5);
 }
 
 #trophy {

@@ -7,14 +7,17 @@ const closeModalButton = modal.querySelector('button');
 const modalResult = document.getElementById('result-popup');
 const modalFeedback = document.getElementById('feedback');
 const closeModalFeedback = modalFeedback.querySelector('button');
+const modalStart = document.getElementById('start');
+const closeModalStart = modalStart.querySelector('button');
 
 const messages = [
-    {
-        id: "bear-wall",
-        title: "Bear",
-        message: ``,
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/bear_SE.png"
-    },
+    // {
+    //     id: "bear-wall",
+    //     title: "Bear",
+    //     message: `Nothing to see here...`,
+    //     image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/bear_SE.png",
+    //     story: []
+    // },
     {
         id: "tv",
         title: "TV",
@@ -32,8 +35,9 @@ const messages = [
     {
         id: "bed-pillow",
         title: "Bed pillow",
-        message: ``,
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/pillowLong_SE.png"
+        message: `I am tired, lets go to bed... I need a tea first, a good book and to brush my teeth...`,
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/pillowLong_SE.png",
+        story: ["bathroom-mirror", "bookshelf-books", "livingRoom-cup-table"]
     },
     {
         id: 'bedroom-rug',
@@ -45,14 +49,16 @@ const messages = [
     {
         id: "bathroom-mirror",
         title: "Mirror",
-        message: ``,
-        image: 'https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/bathroomMirror_SE.png'
+        message: `Time for bed...`,
+        image: 'https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/bathroomMirror_SE.png',
+        story: ["bed-pillow"]
     },
     {
         id: "nightstand",
         title: "Nightstand",
-        message: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/cabinetBed_SW.png"
+        message: "Time for bed and lights off. I need to wake up early.",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/cabinetBed_SW.png",
+        story: ["bathroom-mirror", "bed-pillow"]
     },
     {
         id: "microwave",
@@ -64,32 +70,37 @@ const messages = [
     {
         id: "blender",
         title: "Blender",
-        message: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenBlender_SE.png"
+        message: "Time for making a smoothie and relaxing in front of the TV...",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenBlender_SE.png",
+        story: ["tv", "sofa"]
     },
     {
         id: "oven",
         title: "Stove",
-        message: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenStoveElectric_SE.png"
+        message: "Time to cook a soup!",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/kitchenStoveElectric_SE.png",
+        story: ["blender"]
     },
     {
         id: "washing-machine",
         title: "Washing machine",
-        message: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/washer_SE.png"
+        message: "Let's start a machine while I go back to work.",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/washer_SE.png",
+        story: ["laptop"]
     },
     {
         id: "dryer",
         title: "Dryer",
-        message: "",
+        message: "Washing is done. Time to relax. Let's chill in front of Netflix. I'll make myself a smoothie.",
         image: 'https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/dryer_SE.png',
+        story: ["tv", "sofa", "blender"]
     },
     {
         id: "livingRoom-radio",
         title: "Radio",
-        message: "",
-        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/radio_SE.png"
+        message: "Let's put on some nice music and get to work, I have some emails to answer to... Let's not forget my coffee.",
+        image: "https://raw.githubusercontent.com/lessacs/project-1/main/images/kenney_furniturePack/Isometric/radio_SE.png",
+        story: ["laptop", "livingRoom-cup-table"]
     },
     {
         id: "livingRoom-cup-table",
@@ -113,6 +124,11 @@ const messages = [
         story: ["livingRoom-radio", "sofa", "livingRoom-cup-table"]
     }
 ];
+
+
+modalStart.showModal();
+closeModalStart.addEventListener('click', () => modalStart.close());
+
 
 cluesElements.forEach(clue => {
     clue.addEventListener("click", () => {
@@ -148,7 +164,7 @@ cluesElements.forEach(clue => {
 })
 
 closeModalButton.addEventListener("click", () => modal.close());
-closeModalFeedback.addEventListener('click', () => modalFeedback.close())
+closeModalFeedback.addEventListener('click', () => modalFeedback.close());
 
 document.querySelectorAll('.reset').forEach(btn => {
     btn.addEventListener('click', ()=> {
